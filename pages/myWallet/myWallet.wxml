@@ -1,0 +1,43 @@
+<!--pages/myWallet/myWallet.wxml-->
+<view>
+  <view class='balance-box'>
+    <view class='balance-title'>当前余额</view>
+    <view class='current-balance'>￥{{currentBalance}}</view>
+    <view>
+      <view class='balance-btn' bindtap="gotoCharge">充值余额</view>
+      <view class='balance-btn' bindtap="gotoExchange">积分兑换</view>
+    </view>
+  </view>
+  <view class="balance-head">余额明细</view>
+  <view class="group-wrapper">
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+    <scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="pullupLoad">
+      <view class="group-item" wx:for="{{balanceArr}}" wx:if="{{balanceArr.length >= 1}}" wx:key="idx">
+        <view class="balance-item">
+          <view>
+            <view class="group-item_title" wx:if="{{item.payChannel === 'wxpay' && item.type === 'consume'}}">微信支付</view>
+            <view class="group-item_title" wx:if="{{item.payChannel === 'alipay' && item.type === 'consume'}}">支付宝</view>
+            <view class="group-item_title" wx:if="{{item.payChannel === 'balance' && item.type === 'consume'}}">余额</view>
+            <view class="group-item_title" wx:if="{{item.payChannel === 'wxpay' && item.type === 'charge'}}">充值：微信</view>
+            <view class="group-item_title" wx:if="{{item.payChannel === 'alipay' && item.type === 'charge'}}">充值：支付宝</view>
+            <view class="small-font">{{item.createTime}}</view>
+          </view>
+          <view class="balance-money-cont">
+            <view class="c-money" wx:if="{{item.type === 'consume'}}">-{{item.money}}</view>
+            <view class="c-money" wx:if="{{item.type === 'charge'}}">+{{item.money}}</view>
+            <view class='small-font'>赠送{{item.credit}}积分</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <!--加载中-->
+      <view>
+        <view class="loading" hidden="{{!isLoding}}">正在加载...</view>
+        <view class="loading complete" hidden="{{!isLodingComplete}}">已加载全部</view>
+      </view>
+      <!--没有数据-->
+      <view class="no-balance-box" wx:if="{{!balanceArr.length}}">暂无明细</view>
+  </view>
+</view>

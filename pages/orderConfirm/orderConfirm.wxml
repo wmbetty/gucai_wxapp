@@ -1,0 +1,99 @@
+<!--pages/orderConfirm/orderConfirm.wxml-->
+<view>
+    <view class="order-main">
+        <view class="order-head">
+            <image src="/images/ic_position.png" class="order-head_icon"></image>
+            <text class="order-head_text">当前位置：{{currTable}}</text>
+        </view>
+        <!--商品数据-->
+        <view class="order-goods-cont">
+            <view class="order-list-item" wx:for="{{getGoods}}" wx:key="{{item.id}}" data-type="{{item.id}}" catchtap="gotoDetail">
+                <view class="order-list-item-media"><image src="{{item.image}}"></image></view>
+                <view class="order-list-item-inner">
+                    <view class="order-list-item-text">{{item.name}}</view>
+                    <view class="goods-remark">备注：</view>
+                    <view class="order-list-item-info">
+                        <view class="order-list-item-text red-font">￥{{item.price}}</view>
+                        <view class="goods-list-item-right goods-count-text">x{{item.count}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="order-goods-total">
+            <view>商品总额</view>
+            <view class="red-font">￥100.00</view>
+        </view>
+        <view class="order-pay-wrapper" wx:if="{{userProfile === 'user'}}">
+            <view class="pay-title">支付方式</view>
+            <view class="paychannel-list">
+                <radio-group class="" bindchange="" class="radio-group" bindchange="radioChange">
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/balance_icon.png" class="paychannel-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">会员余额支付</view>
+                                <view class='color-888'>可用余额2.0元</view>
+                            </view>
+                        </view>
+                        <view>
+                            <!--<radio color='{{color}}' value="{{item.chargeMoney}}" checked="{{item.checked}}"/>-->
+                            <radio color="{{radioColor}}" value="2.0" checked="true"/>
+                        </view>
+                    </view>
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/wechatpay_icon.png" class="paychannel-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">微信支付</view>
+                            </view>
+                        </view>
+                        <view>
+                            <radio color="{{radioColor}}" value="wxpay"/>
+                        </view>
+                    </view>
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/wallet_icon.png" class="paychannel-icon wallet-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">线下支付</view>
+                            </view>
+                        </view>
+                        <view>
+                            <radio color="{{radioColor}}" value="offline"/>
+                        </view>
+                    </view>
+                </radio-group>
+            </view>
+        </view>
+        <view class="order-pay-wrapper" wx:else>
+            <view class="pay-title">下单方式</view>
+            <view class="paychannel-list">
+                <radio-group class="" bindchange="" class="radio-group" bindchange="radioChange">
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/balance_icon.png" class="paychannel-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">帮客户下单</view>
+                            </view>
+                        </view>
+                        <view>
+                            <radio color="{{radioColor}}" value="2.0" checked="true"/>
+                        </view>
+                    </view>
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/ic_give.png" class="paychannel-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">赠送</view>
+                            </view>
+                        </view>
+                        <view>
+                            <radio color="{{radioColor}}" value="offline"/>
+                        </view>
+                    </view>
+                </radio-group>
+            </view>
+        </view>
+    </view>
+    <view class="order-confirm-btn" bindtap="orderConfirm">确认下单</view>
+</view>

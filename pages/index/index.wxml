@@ -1,0 +1,39 @@
+<!--pages/index/index.wxml-->
+<view>
+    <view class="banner-main">
+        <swiper autoplay="{{autoplay}}" interval="{{interval}}"
+                duration="{{duration}}" current="{{current}}" current="{{swiperCurrent}}" bindchange="swiperChange">
+            <block wx:for="{{imgUrls}}" wx:key="idx">
+                <swiper-item class="banner-container">
+                    <image src="{{item}}" class="slide-image" width="355" height="150"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="dots">
+            <block wx:for="{{slider}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+    <view class='infos-cont'>
+        <view class="infos-cont-item">
+            <image class="bar-split-line" src="/images/ic_line_right.png"></image>
+            <view>关于酒吧</view>
+            <image class="bar-split-line" src="/images/ic_line_left.png"></image>
+        </view>
+        <view class='bar-infos'>
+          五号酒吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+        </view>
+        <view class='location-text'>
+            <view class="infos-cont-item">
+                <image class="bar-split-line" src="/images/ic_line_right.png"></image>
+                <view>所在位置</view>
+                <image class="bar-split-line" src="/images/ic_line_left.png"></image>
+            </view>
+        </view>
+        <view class="bar-infos">
+            <image class="bar-location_img" src="/images/test1.png"></image>
+        </view>
+    </view>
+    <order-btn></order-btn>
+</view>

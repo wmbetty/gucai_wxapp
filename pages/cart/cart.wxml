@@ -1,0 +1,47 @@
+<!--pages/cart/cart.wxml-->
+<view>
+    <view class="cart-head">
+        <text class="cart-left-item left-item">已选商品</text>
+        <text class="cart-left-item right-item">清空</text>
+    </view>
+    <view>
+        <view class="cart-goods-wrapper">
+            <view class="cart-goods-item first-item">
+                <view>蓝色夏威夷</view>
+                <view class="goods-remark-btn">备注</view>
+            </view>
+            <view class="cart-goods-item sed-item">￥888.00</view>
+            <view class="cart-goods-item thd-item">
+                <text class="inline-item operator-icon" catchtap="numCut">-</text>
+                <input class="inline-item small-put" type="number" bindinput="inputEnter" value="{{people}}" data-type="people" placeholder-class="phcolor" placeholder="1"/>
+                <text class="inline-item operator-icon" catchtap="numAdd">+</text>
+            </view>
+        </view>
+        <view class="cart-goods-wrapper">
+            <view class="cart-goods-item first-item">
+                <view>蓝色夏威夷</view>
+                <view class="goods-remark-btn">备注</view>
+            </view>
+            <view class="cart-goods-item sed-item">￥888.00</view>
+            <view class="cart-goods-item thd-item">
+                <text class="inline-item operator-icon" catchtap="numCut">-</text>
+                <input class="inline-item small-put" type="number" bindinput="inputEnter" value="{{people}}" data-type="people" placeholder-class="phcolor" placeholder="1"/>
+                <text class="inline-item operator-icon" catchtap="numAdd">+</text>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="goods-sum-wrapper">
+            <view class="cart-left-item">蓝色夏威夷</view>
+            <view class="cart-left-item text-right">x<text>1</text></view>
+        </view>
+        <view class="goods-sum-wrapper">
+            <view class="cart-left-item">蓝色夏威夷</view>
+            <view class="cart-left-item text-right">x<text>1</text></view>
+        </view>
+    </view>
+    <view class="cart-foot">
+        <view class="cart-foot-left">34</view>
+        <view class="cart-foot-right">确认下单</view>
+    </view>
+</view>

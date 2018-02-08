@@ -1,0 +1,67 @@
+<!--pages/orderRoom/orderRoom.wxml-->
+<view>
+    <view class="group-wrapper">
+        <view>
+            <view class="wrapper-list">
+                <view class="group-item no-padding">
+                    <view class="group-item-title">
+                        <input class="text-right" type="text" bindinput="inputEnter" value="{{phone}}" data-type="phone" placeholder-class="phcolor" placeholder="请输入顾客手机号"/>
+                    </view>
+                </view>
+            </view>
+            <view class="wrapper-list">
+                <view class="group-item had-border-bottom">
+                    <view class="group-item-title">酒品牌</view>
+                    <view class="right-item more-arrow-item" catchtap="goChooseBrand">
+                        <input class="text-right" type="text" bindinput="inputEnter" value="{{brand}}" data-type="brand" placeholder-class="phcolor" placeholder="请选择酒品名称"/>
+                        <text class="right-arrow"></text>
+                    </view>
+                </view>
+                <view class="group-item">
+                    <view class="group-item-title">数量</view>
+                    <view class="right-item">
+                        <text class="inline-item operator-icon" catchtap="numCut">-</text>
+                        <input class="inline-item small-put" type="number" bindinput="inputEnter" value="{{count}}" data-type="people" placeholder-class="phcolor" placeholder="1"/>
+                        <text class="inline-item operator-icon" catchtap="numAdd">+</text>
+                    </view>
+                </view>
+            </view>
+            <view class="wrapper-list">
+                <view class="group-item">
+                    <view class="group-item-title">酒库</view>
+                    <view class="right-item more-arrow-item" catchtap="goChooseStorage">
+                        <input class="text-right" type="text" bindinput="inputEnter" value="{{wStorage}}" data-type="wStorage" placeholder-class="phcolor" placeholder="请选择酒库"/>
+                        <text class="right-arrow"></text>
+                    </view>
+                </view>
+            </view>
+            <view class="wrapper-list">
+                <view class="group-item">
+                    <view class="group-item-title">备注</view>
+                    <view class="right-item infos-item">
+                        <input class="text-right" type="text" bindinput="inputEnter" data-type="infos" placeholder-class="phcolor" placeholder="您有什么要求，请告诉我们"/>
+                    </view>
+                </view>
+            </view>
+            <view class="picsWrapper">
+                <view class="pic-wrapper">
+                    <view class="pic-item">
+                        <view class="upload-container">
+                            <view class="img-outer" wx:for="{{picUrl}}" wx:key="idx">
+                                <image mode="aspectFill" src="{{item}}" alt="" data-type="{{item}}" bindtap="previewImage"></image>
+                                <view class="close-img_icon" data-src="{{item}}" catchtap="deleteImg"></view>
+                            </view>
+                        </view>
+                        <view class="no-pic-wrapper" wx:if="{{noImg}}" bindtap="choosePic">
+                            <image class="pic-add_icon" src="/images/add_photos_icon.png" alt=""></image>
+                            <view class="upload-pic-text">最多上传3张</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <button class="order-submit-btn" bindtap="submitRoom">确认</button>
+    </view>
+</view>

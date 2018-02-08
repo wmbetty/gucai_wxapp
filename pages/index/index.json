@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "酒吧",
+  "usingComponents": {
+    "order-btn": "../../component/goOrder/goOrder"
+  }
+}

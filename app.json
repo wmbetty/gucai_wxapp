@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/goodsList/goodsList",
+    "pages/search/search",
+    "pages/goodsDetail/goodsDetail",
+    "pages/charge/charge",
+    "pages/myWallet/myWallet",
+    "pages/myWines/myWines",
+    "pages/storeWine/storeWine",
+    "pages/chooseRoom/chooseRoom",
+    "pages/orderRoom/orderRoom",
+    "pages/orderConfirm/orderConfirm",
+    "pages/cart/cart",
+    "pages/exchangeCredits/exchangeCredits",
+    "pages/exchangeConf/exchangeConf",
+    "pages/protocols/protocols",
+    "pages/exchangeRecords/exchangeRecords",
+    "pages/chooseWineBrand/chooseWineBrand",
+    "pages/wineStorage/wineStorage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1a1a1a",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#cfcfcf",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "iconPath": "./images/tabIcons/home_icon.png",
+        "selectedIconPath": "./images/tabIcons/home_actived_icon.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "iconPath": "./images/tabIcons/user_icon.png",
+        "selectedIconPath": "./images/tabIcons/user_actived_icon.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+<!--pages/chooseRoom/chooseRoom.wxml-->
+<view>
+    <view class="o-flex-container">
+        <view class="left-side">
+          <view class='left-side-lists'>
+            <view class='side-list-item' wx:for="{{roomAreas}}" wx:key="idx" data-type="{{item.id}}" bindtap='selectArea'>
+              <text class="{{item.leftSideItemActived ? 'list-item_text list-item_text-active' : 'list-item_text'}}">{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="right-side">
+          <view class='date-container'>
+            <picker class='date-picker' mode="date" value="{{date}}" bindchange="bindDateChange">
+              <view class="picker">
+                {{dateTitle}}: {{orderDate}}
+              </view>
+                <text></text>
+            </picker>
+          </view>
+          <view class='room-container'>
+            <view wx:for="{{getRooms}}" class="{{item.roomBgColor}}" wx:key="item.id" data-type="{{item}}" bindtap='goOrder'>
+              <view class='room-name'>{{item.name}}</view>
+              <view class="{{!item.hidden ? 'text-hidden' : ''}}">最大人数：{{item.maxPeople}}</view>
+              <view wx:if="{{item.status === 0}}">低消：{{item.leastConsumed}}</view>
+              <view wx:if="{{item.status === 1}}">已开台</view>
+              <view wx:if="{{item.status === 2}}">维修中</view>
+              <view wx:if="{{item.status === 3}}">已预订</view>
+            </view>
+              <view wx:if="{{getRooms.length === 0}}" class="no-rooms">{{noRoomText}}</view>
+          </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "order-btn": "../../component/goOrder/goOrder"
+  }
+}

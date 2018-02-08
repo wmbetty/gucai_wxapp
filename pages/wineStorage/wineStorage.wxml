@@ -1,0 +1,7 @@
+<!--pages/wineStorage/wineStorage.wxml-->
+<view>
+    <view class="bg-white">
+        <view class="wine-list-tem" wx:for="{{wineStorages}}" wx:key="idx"
+              data-type="{{item}}" bindtap="chooseWine">{{item.name}}</view>
+    </view>
+</view>

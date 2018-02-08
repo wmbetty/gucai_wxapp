@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<view>
+    <!--<input type="text" placeholder="搜索" class="search-input" autofocus/>-->
+    <view class="search-input-container">
+        <input type="text" placeholder="请输入商品名称" value="{{searchText}}" bindinput="inputEnter" class="search-input" focus="{{focus}}"/>
+        <icon class="search-close-icon" wx:if="{{showCloseIcon}}" catchtap="clearInput"/>
+    </view>
+    <view class="search-content">
+        <!--搜索结果: 循环输出search-list-item-->
+        <view class="search-list-item" wx:for="{{getGoods}}" wx:key="{{item.id}}" data-type="{{item.id}}" catchtap="gotoDetail">
+            <view class="search-list-item-media"><image src="{{item.image}}"></image></view>
+            <view class="search-list-item-inner">
+                <view class="search-list-item-text">{{item.name}}</view>
+                <view class="search-list-item-info">
+                    <view class="search-list-item-text red-font">￥{{item.price}}</view>
+                    <view class="goods-list-item-right">
+                        <view class="operator-icon" catchtap="numCut" data-type="{{item}}">-</view>
+                        <view>
+                            <input type="text" class="goods-num" data-type="{{item}}" bindinput="numEnter" value="{{item.count}}"/>
+                        </view>
+                        <view class="operator-icon" catchtap="numAdd" data-type="{{item}}">+</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!--没有搜索结果时-->
+        <view wx:if="{{showNoGoos}}" class="no-goods">暂无搜索结果</view>
+    </view>
+    <view class="goods-foot">
+        <view>
+            <view class="cart-cont">
+                <image class="cart-icon" src="/images/cart_icon.png"></image>
+                <text class="cart-count" wx:if="{{cartCount >= 1}}">{{cartCount}}</text>
+            </view>
+        </view>
+        <view class="order-confirm-btn">确认下单</view>
+    </view>
+</view>

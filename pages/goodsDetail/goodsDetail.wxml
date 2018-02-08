@@ -1,0 +1,20 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<view>
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="idx">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="goods-infos-container">
+        <view class="goods-name">意大利阿奎斯莫斯卡 托阿斯蒂甜白起泡葡萄酒</view>
+        <view class="red-font goods-price">￥308</view>
+        <view class="goods-details">来自于意大利阿斯蒂产区，由100%小粒麝香葡萄酿成，
+            以甜蜜芬芳而著称，香甜的口感加上清爽的酸度，着实
+            可以愉悦心情 ，而较低的酒精度 ，即使是在午餐小酌，
+            也不致影响到下午的工作，Moscato d’Asti 不仅能满足
+            平时喝点小酒的人，不喝酒的人对它也不会倍感压力。</view>
+    </view>
+</view>

@@ -1,0 +1,54 @@
+/* pages/exchangeCredits/exchangeCredits.wxss */
+page{background: #f6f6f6;}
+.credits-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50rpx 40rpx;
+    background: #fff;
+}
+.c-title{
+  font-size: 34rpx;color: #000;
+}
+.cr-num{
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 18px;
+}
+.record-text{
+  font-size: 32rpx;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  padding: 12rpx 28rpx;
+  border-radius: 26px;
+}
+.credit-wrapper{background: #fff;margin-top:16rpx;}
+.list-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 16px 10px 18px;
+    border-bottom: 1px solid #eee;
+}
+.exchange-btn{
+  font-size: 28rpx;
+  width: 168rpx;
+  /* padding: 4px 0; */
+  margin-top: 8px;
+  border-radius: 3px;
+  background: #FF3939;color: #fff;
+}
+.goods-name-text{
+  font-size: 34rpx;
+  color: #333;
+}
+.credit-cont{
+  font-size: 28rpx;color: #999;
+  margin-top: 8px;
+}
+.need-pay-credits{
+  margin-left: 6px;
+}
+button.no-change{
+    background: #ebebeb;color: #666;
+}

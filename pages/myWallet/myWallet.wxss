@@ -1,0 +1,88 @@
+/* pages/myWallet/myWallet.wxss */
+page{background: #F6F6F6;}
+.balance-box{
+  text-align: center;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 30px 0;
+}
+.balance-title{
+  font-size: 15px;
+}
+.current-balance{
+  padding: 24px 0;
+  font-size: 50rpx;
+}
+.balance-btn{
+  display: inline-block;
+  width: 120rpx;
+  padding: 14rpx 22rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  text-align: center;
+  border-radius: 28rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.balance-btn:first-child{margin-right: 42rpx;}
+.balance-btn:last-child{margin-left: 42rpx;}
+.balance-head{
+    font-size: 30rpx;
+    padding: 20rpx 32rpx;
+    background: #f6f6f6;
+    color: #666;letter-spacing: 1px;
+}
+.group-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+.group-item_title{
+    padding-left: 26rpx;
+    font-size: 30rpx;letter-spacing: 1px;
+    margin-bottom: 20rpx;color: #000;
+}
+.balance-item{
+    width: 100%;position: relative;
+    padding: 26rpx 20rpx;
+}
+.group-item:last-child{border: none;}
+.balance-money-cont{
+    position: absolute;
+    right: 20rpx;
+    top: 7%;
+}
+.small-font{
+  font-size: 26rpx;padding-left: 26rpx;color: #888;
+}
+.c-money{margin: 4px 0;}
+.no-balance-box{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+}
+.scroll-view{height: 320px;overflow-y: auto;}
+.no-show{display: none;}
+.loading{
+    padding: 20rpx 0;
+    text-align: center;
+    font-size: 30rpx;color: #999;
+}
+.loading:before{
+    /*display: inline-block;*/
+    /*margin-right: 5rpx;*/
+    /*vertical-align: middle;*/
+    /*content: '';*/
+    /*width: 50rpx;*/
+    /*height: 50rpx;*/
+    /*background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFklEQVQ4T6WSwU3EMBBFZ+bgKykhVEA6YEtYKkC5xM4JSoAKWE62c8mWsFSAqGChA0rIMYlkGQ3KRk7kkEXrmz3+f77fGOHChRfqYdGgruuk67ojIqYAcCelPMSaTQwG0T0RfTjnEiJ6Z5H3/k0ptV01MMbsEPEBABohxHXf99w1RcStc64hoiMAPEspdyezSQJr7SMAvHjvv5RSWdhxSLcnoqeiKD6jBnxYVVUWXliDPCYYut8KIfI8z5slobX2l8UJamjAoqu/iLPQGHNAxI2UMuH9aKC13hBRFgKKpWAWbdsmZVl+TwzW3rpUn0xBa53GRsXipVrsI42j4mch4o1S6vXsMYZR58BWf+L8whzYvw3OAfsDELiAEfq/cUUAAAAASUVORK5CYII=') no-repeat;*/
+    /*background-size: contain;*/
+}
+.loading.complete:before{
+    display: none;
+}

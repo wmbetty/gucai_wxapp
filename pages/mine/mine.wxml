@@ -1,0 +1,61 @@
+<!--pages/mine/mine.wxml-->
+<view>
+    <view class="user-base-info">
+        <view><image src="/images/mine_default_avatar.png" class="avatar-image"></image></view>
+        <view class="user-info_text">Betty</view>
+        <view class="user-info_text">13812345678</view>
+        <view class="user-tag">{{profile === 'user' ?  '用户' : '工作人员'}}</view>
+    </view>
+    <view class="group-wrapper">
+        <view wx:if="{{profile === 'user'}}">
+            <view bindtap="gotoCharge" class="group-item-wrapper">
+                <view class="group-item">
+                    <view class="group-item-title">充值</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+            <view bindtap="gotoMywine" class="group-item-wrapper">
+                <view class="group-item">
+                    <view class="group-item-title">我的酒库</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+            <view bindtap="gotoWallet" class="group-item-wrapper">
+                <view class="group-item">
+                    <view class="group-item-title">我的钱包</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+            <view bindtap="callUs" class="group-item-wrapper">
+                <view class="group-item no-border">
+                    <view class="group-item-title">联系我们</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{profile === 'employee'}}">
+            <view bindtap="goOrderRoom" class="group-item-wrapper">
+                <view class="group-item">
+                    <view class="group-item-title">预约订房</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+            <view bindtap="goStoreWine" class="group-item-wrapper">
+                <view class="group-item">
+                    <view class="group-item-title">存酒服务</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+            <view bindtap="callUs" class="group-item-wrapper">
+                <view class="group-item no-border">
+                    <view class="group-item-title">联系我们</view>
+                    <view class="group-item-arrow"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="logout-text" bindtap="logout">
+        <text>退出登录</text>
+    </view>
+    <order-btn></order-btn>
+</view>

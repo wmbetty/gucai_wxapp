@@ -1,0 +1,21 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+/*swiper-item{height: auto;}*/
+.slide-image{
+    display: block;
+    width: 100%;height: 100%;
+}
+swiper{
+    height: 256px;
+}
+.goods-infos-container{
+    padding: 28rpx 24rpx;
+}
+.goods-name{
+    color: #000;
+    font-size: 34rpx;
+}
+.red-font{color: #FF3939;}
+.goods-price{padding: 30rpx 0;font-size: 42rpx;}
+.goods-details{
+    font-size: 28rpx;color: #666;
+}

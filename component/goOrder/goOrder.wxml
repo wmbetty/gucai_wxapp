@@ -1,0 +1,2 @@
+<!--pages/goOrder/goOrder.wxml-->
+<image src="/images/circle_order_btn.png" class="order-btn-container" bindtap='scanCode'></image>

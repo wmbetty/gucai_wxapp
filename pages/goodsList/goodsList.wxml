@@ -1,0 +1,83 @@
+<!--pages/goodsList/goodsList.wxml-->
+<view class="page-container">
+    <view class="main-page">
+        <view class="goods-tab-header">
+            <view class="goods-tab-item-wrapper">
+                <view class="{{goodsListTabActive ? 'goods-tab-item goods-tab-active' : 'goods-tab-item'}}" data-type="goods" bindtap="tabChange">商品列表</view>
+            </view>
+            <view class="goods-tab-item-wrapper">
+                <view class="{{recordTabActive ? 'goods-tab-item goods-tab-active' : 'goods-tab-item'}}" data-type="records" bindtap="tabChange">已消费记录</view>
+            </view>
+        </view>
+        <!--商品列表部分-->
+        <view class="goods-tab-pannel goods-categorys" wx:if="{{goodsListTabActive}}">
+            <view class="tab-pannel-left">
+                <view wx:for="{{categorys}}" wx:key="{{index}}"
+                      class="{{item.listItemActived ? 'goods-list-item goods-list-item-active' : 'goods-list-item'}}"
+                      data-type="{{item.id}}" bindtap='selectListItem'>{{item.name}}</view>
+            </view>
+            <view class="tab-pannel-right">
+                <!--<input type="text" placeholder="搜索" class="search-input"/>-->
+                <view class="search-input" bindtap="gotoSearch">搜索</view>
+                <view class='current-lot-wrapper'>
+                    <text class="current-lot-text">当前位置：{{currTable}}</text>
+                </view>
+
+                <!--商品列表右侧数据: 循环输出right-list-item-->
+                <view class="right-list-item" wx:for="{{getGoods}}" wx:key="{{item.id}}" data-type="{{item.id}}" catchtap="gotoDetail">
+                    <view class="right-list-item-media"><image src="{{item.image}}"></image></view>
+                    <view class="right-list-item-inner">
+                        <view class="right-list-item-text">{{item.name}}</view>
+                        <view class="right-list-item-info">
+                            <view class="right-list-item-text red-font">￥{{item.price}}</view>
+                            <view class="goods-list-item-right">
+                                <view class="operator-icon" catchtap="numCut" data-type="{{item}}">-</view>
+                                <view>
+                                    <input type="text" class="goods-num" data-type="{{item}}" bindinput="inputEnter" value="{{item.count}}"/>
+                                </view>
+                                <view class="operator-icon" catchtap="numAdd" data-type="{{item}}">+</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{getGoods.length === 0}}" class="no-goods">{{noGoodsText}}</view>
+            </view>
+        </view>
+
+        <!--消费记录部分-->
+        <view class="goods-tab-pannel record-tab-pannel" wx:else>
+            <view class="r-split-line"></view>
+            <view>
+                <!--循环输出：right-list-item-->
+                <view class="right-list-item record-list-item" wx:for="{{recordList}}" wx:key="{{item.id}}">
+                    <view class="right-list-item-media"><image src="{{item.image}}"></image></view>
+                    <view class="right-list-item-inner">
+                        <view class="right-list-item-text">
+                            <text>{{item.name}}</text>
+                            <text class="send-text" wx:if="{{item.isSend}}">赠送商品</text>
+                        </view>
+                        <text class="record-goods-list color-888">{{item.subGoods}}</text>
+                        <view class="record-list-item-info">
+                            <view class="red-font">单价：{{item.price}}/{{item.spec}}</view>
+                            <view class="color-888">数量：{{item.count}}</view>
+                            <view class="color-888">{{item.outTime}}已出</view>
+                        </view>
+                    </view>
+                </view>
+                <!--没有数据时-->
+                <view wx:if="{{recordList.length === 0}}" class="no-records">暂无消费</view>
+
+            </view>
+        </view>
+
+    </view>
+    <view class="goods-foot" wx:if="{{goodsListTabActive}}">
+        <view>
+            <view class="cart-cont">
+                <image class="cart-icon" src="/images/cart_icon.png"></image>
+                <text class="cart-count">{{cartCount}}</text>
+            </view>
+        </view>
+        <view class="order-confirm-btn">确认下单</view>
+    </view>
+</view>

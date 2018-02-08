@@ -1,0 +1,53 @@
+/* pages/charge/charge.wxss */
+.charge-head{
+    font-size: 16px;
+    padding: 12px;
+    background: #F6F6F6;
+    color: #666;
+}
+.group-wrapper{
+    /*border-top: 1px solid #ddd;*/
+}
+.group-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 0 8rpx;
+    padding-right: 0;
+}
+.group-item_title{
+    padding-left: 22rpx;
+    font-size: 36rpx; color: #333; 
+}
+.get-credit_text{
+    font-size: 28rpx;
+    color: #999;
+    margin-top: 28rpx;
+    padding-left: 22rpx;
+    letter-spacing: 1px;
+}
+.charge-money-cont{
+    position: absolute;
+    right: 20rpx;
+    top: 34%;
+}
+.c-money{
+    display: inline-block;
+    margin-right: 18px;
+}
+.radio-group{
+    width: 100%;
+}
+.charge-item{
+    width: 100%;position: relative;
+    padding: 34rpx 0;
+    border-bottom: 1px solid #ddd;
+}
+.btn-box{
+    width: 100%;
+    margin-top: 170rpx;
+}
+.charge-pay_btn{font-size: 34rpx;width: 75%;margin: 0 auto;letter-spacing: 1px;color: #fff;background: #1a1a1a;}

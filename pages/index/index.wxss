@@ -1,0 +1,67 @@
+/* pages/index/index.wxss */
+.banner-main{position: relative;}
+.banner-main swiper{
+    height: 420rpx;
+}
+.dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30rpx;
+    display: flex;
+    justify-content: center;
+}
+.dots .dot{
+    margin: 0 8rpx;
+    width: 60rpx;
+    height: 6rpx;
+    background: #eee;
+    opacity: 0.6;
+    border-radius: 2rpx;
+    transition: all .6s;
+}
+.dots .dot.active{
+    opacity: 1;
+    background: #fff;
+}
+.banner-container image{
+    width: 100%;
+    height: 100%;
+}
+.infos-cont{
+  padding: 14px 10px;
+  font-size: 15px;
+}
+.bar-infos{
+  margin: 12px 14px;
+  padding-bottom: 12px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.bar-infos:last-child{border-bottom: none;}
+.bar-location_img{
+    display: block;
+    width: 100%;height: 170px;
+}
+.location-text{
+  margin: 18px 0 6px;
+}
+map{width: 100%;height: 180px;margin: 8px 0;}
+.infos-cont-item{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+.bar-split-line{
+    display: block;
+    margin: 8px 14px;
+    width: 180rpx;height: 10rpx;
+}
+@media screen and (max-width: 320px){
+    .banner-main swiper{
+        height: 380rpx;
+    }
+    .bar-location_img{height: 150px;}
+}

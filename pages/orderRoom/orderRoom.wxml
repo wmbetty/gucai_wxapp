@@ -1,0 +1,58 @@
+<!--pages/orderRoom/orderRoom.wxml-->
+<view>
+    <view class="room-head">您的订房信息如下</view>
+    <view class="room-info-content">
+        <view>订房时间：{{roomInfo.date}}</view>
+        <view>位置：{{roomInfo.name}}</view>
+        <view>最低消费：{{roomInfo.leastConsumed}}.00元</view>
+        <view>最大人数：{{roomInfo.maxPeople}}人</view>
+    </view>
+    <view class="group-wrapper">
+        <view>
+            <view class="group-item">
+                <view class="group-item-title"><text decode="{{true}}" class="o-star_text">*&nbsp;</text>到达时间</view>
+                <view class="right-item">
+                    <picker mode="date" value="{{arriveDate}}" bindchange="bindDateChange">
+                        <view class="picker">
+                            选择: {{arriveDate}}
+                        </view>
+                    </picker>
+                    <picker mode="time" value="{{arrivetTime}}" bindchange="bindTimeChange">
+                        <view class="picker">
+                            {{arrivetTime}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="group-item">
+                <view class="group-item-title">姓名</view>
+                <view class="right-item">
+                    <input class="text-right" type="text" bindinput="inputEnter" data-type="name" placeholder-class="phcolor" placeholder="请输入姓名"/>
+                </view>
+            </view>
+            <view class="group-item">
+                <view class="group-item-title">手机号</view>
+                <view class="right-item">
+                    <input class="text-right" type="number" bindinput="inputEnter" data-type="phone" placeholder-class="phcolor" placeholder="请输入手机号"/>
+                </view>
+            </view>
+            <view class="group-item">
+                <view class="group-item-title">预计人数</view>
+                <view class="right-item">
+                    <text class="inline-item operator-icon" catchtap="numCut">-</text>
+                    <input class="inline-item small-put" type="number" bindinput="inputEnter" value="{{people}}" data-type="people" placeholder-class="phcolor" placeholder="1"/>
+                    <text class="inline-item operator-icon" catchtap="numAdd">+</text>
+                </view>
+            </view>
+            <view class="group-item">
+                <view class="group-item-title">备注</view>
+                <view class="right-item">
+                    <input class="text-right" type="text" bindinput="inputEnter" data-type="infos" placeholder-class="phcolor" placeholder="请输入备注"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <button class="order-submit-btn" bindtap="submitRoom">确认提交</button>
+    </view>
+</view>

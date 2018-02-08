@@ -1,0 +1,10 @@
+<!--pages/chooseWineBrand/chooseWineBrand.wxml-->
+<view>
+    <view wx:for="{{brands}}" wx:key="idx">
+        <view class="brand-list">{{item.name}}</view>
+        <view class="bg-white">
+          <view class="brand-list-item" wx:for="{{item.subBrands}}" wx:for-item="subBrand" wx:key="idx"
+              data-type="{{subBrand}}" bindtap="chooseBrand">{{subBrand.name}}</view>
+        </view>
+    </view>
+</view>

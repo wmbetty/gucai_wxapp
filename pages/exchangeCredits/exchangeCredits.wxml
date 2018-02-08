@@ -1,0 +1,28 @@
+<!--pages/exchangeCredits/exchangeCredits.wxml-->
+<view>
+  <view class="credits-head">
+    <view>
+      <text class='c-title'>当前积分</text>
+      <text class='cr-num'>{{currentCredits}}</text>
+    </view>
+    <view class="record-text" bindtap="gotoRecord">积分使用记录</view>
+  </view>
+
+  <view class="credit-wrapper">
+    <view class="list-cont" wx:for="{{creditList}}" wx:key="idx">
+      <view>
+        <view class='goods-name-text'>{{item.goodsName}}</view>
+        <view class='credit-cont'>
+          <text>所需积分</text>
+          <text class='need-pay-credits'>{{item.credits}}</text>
+        </view>
+      </view>
+      <view>
+        <button class="{{item.credits < currentCredits ? 'exchange-btn' : 'exchange-btn no-change'}}" data-type="{{item.credits}}"
+                bindtap="gotoExchange">{{item.credits < currentCredits  ? '可兑换' : '积分不足'}}</button>
+      </view>
+    </view>
+  </view>
+
+</view>
+

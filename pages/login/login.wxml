@@ -1,0 +1,33 @@
+<!--login.wxml-->
+<view class="login-bg">
+    <view class="login-main">
+        <view class="login-put-box">
+            <icon class="login-phone-icon"/>
+            <input class="login-input" type="number" bindinput="inputEnter" data-type="phone" placeholder-class="phcolor" placeholder="请输入员工账号" auto-focus wx:if="{{isEmployee}}"/>
+            <input class="login-input" type="number" bindinput="inputEnter" data-type="phone" placeholder-class="phcolor" placeholder="请输入11位手机号" auto-focus wx:else/>
+        </view>
+        <view class="login-put-box" wx:if="{{!isEmployee}}">
+            <icon class="login-pass-icon"/>
+            <input class="login-input login-code-input" type="number" bindinput="inputEnter" data-type="code" placeholder-class="phcolor" placeholder="请输入验证码"/>
+            <!-- <button class="get-code-btn" bindtap="sendCode" data-type="code-btn" disabled="{{codeDis}}" wx:if="{{!codeDis}}">{{sendCodeText}}</button> -->
+            <!-- <button class="get-code-btn" bindtap="sendCode" data-type="code-btn" disabled="{{codeDis}}" wx:if="{{codeDis}}">{{sendCodeText + 's'}}</button> -->
+            <view class="get-code-btn" plain="true" bindtap="sendCode" data-type="code-btn" wx:if="{{!codeDis}}">{{sendCodeText}}</view>
+            <view class="get-code-btn" bindtap="sendCode" data-type="code-btn" wx:else>{{sendCodeText + 's'}}</view>
+        </view>
+        <view class="login-put-box pass-put-box" wx:else>
+            <icon class="login-pass-icon employee-login-pass-icon"/>
+            <input class="login-input" type="password" bindinput="inputEnter" data-type="password" placeholder-class="phcolor" placeholder="请输入密码"/>
+        </view>
+    </view>
+    <view>
+        <button class="login-btn" bindtap="login">登录</button>
+        <view class='employee-cont'>
+          <text class="employee-login-btn" bindtap="goEmployeeLogin" wx:if="{{!isEmployee}}">员工登录</text>
+        <text class="employee-login-btn" bindtap="goEmployeeLogin" wx:if="{{isEmployee}}">我不是员工，返回</text>
+        </view>
+    </view>
+    <view class="login-info-text">
+        <text>登录即代表我同意</text>
+        <text class="u-protocol" bindtap="goProtocol">用户协议</text>
+    </view>
+</view>

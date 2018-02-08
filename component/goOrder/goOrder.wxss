@@ -1,0 +1,25 @@
+/* pages/goOrder/goOrder.wxss */
+.order-btn-container{
+    position: fixed;
+    bottom: 46rpx;
+    right: 28rpx;
+    width: 146rpx;
+    height: 146rpx;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    z-index: 5000;
+}
+.order-btn-container image{
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 6px auto 0;
+}
+@media screen and (max-width: 320px){
+    .order-btn-container{
+        bottom: 18px;
+        width: 66px;
+        height: 66px;
+    }
+}

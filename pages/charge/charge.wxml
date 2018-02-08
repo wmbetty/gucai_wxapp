@@ -1,0 +1,25 @@
+<!--pages/charge/charge.wxml-->
+<view>
+    <view class="charge-head">请选择充值金额</view>
+    <view class="group-wrapper">
+        <view>
+            <view class="group-item">
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <view class="charge-item" wx:for="{{chargeArr}}" wx:key="idx">
+                        <view>
+                            <view class="group-item_title">{{item.title}}</view>
+                            <view class="get-credit_text">{{item.rewards}}</view>
+                        </view>
+                        <view class="charge-money-cont">
+                            <text class="c-money">{{item.chargeMoney}}</text>
+                            <radio value="{{item.chargeMoney}}" checked="{{item.checked}}"/>
+                        </view>
+                    </view>
+                </radio-group>
+            </view>
+        </view>
+    </view>
+    <view class="btn-box">
+        <button class="charge-pay_btn" bindtap="payMoney">微信需支付<text decode="{{true}}">&nbsp;{{needPay}}&nbsp;</text>元</button>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+/* pages/chooseWineBrand/chooseWineBrand.wxss */
+page{background: #f6f6f6;}
+.bg-white{background: #fff;}
+.brand-list{
+    font-size: 28rpx;color: #666;
+    padding: 12px;
+}
+.brand-list-item{
+   padding: 12px 0;
+   margin: 0 0 0 18px;
+    font-size: 30rpx;
+    background: #fff;color: #333;
+    border-bottom: 1px solid #ddd;
+}
+.brand-list-item:last-child{border-bottom: none;}

@@ -1,0 +1,22 @@
+<!--pages/myWines/myWines.wxml-->
+<view>
+    <view class="wine-list-item" wx:for="{{wineData}}" wx:key="idx">
+        <view class="wine-list-infos">
+            <view class="wine-list-item_left">
+                <view>酒水名称：{{item.name}}</view>
+                <view>数量：{{item.count}}</view>
+                <view>有效时间：{{item.times}}</view>
+                <view>备注：{{item.remark}}</view>
+            </view>
+            <view class="wine-list-item_right">
+                <view class="wine-btn" wx:if="{{!item.wineStatus}}" catchtap="getWine">取酒</view>
+                <image src="/images/wine_taken_icon.png" wx:else></image>
+            </view>
+        </view>
+        <view class='wine-goods-img-container'>
+            <image class="wine-goods-img" src="/images/wine_test1.png"></image>
+            <image class="wine-goods-img" src="/images/wine_test1.png"></image>
+            <image class="wine-goods-img" src="/images/wine_test1.png"></image>
+        </view>
+    </view>
+</view>

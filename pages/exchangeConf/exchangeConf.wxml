@@ -1,0 +1,39 @@
+<!--pages/exchangeConf/exchangeConf.wxml-->
+<view>
+  <view class="goods-base-info">
+        <view class="goods-img">
+            <!--<image src="{{userInfo.avatarUrl}}"></image>-->
+            <image src="/images/wine_test1.png"></image>
+        </view>
+        <view class="other-info-wrapper">
+            <!--userInfo.nickName-->
+            <view class="nickname-box">
+                <text class="u-nickname">啦啦啦</text>
+            </view>
+            <view>
+                <text class='credit-text'>所需积分</text>
+                <text class='need-pay-credits credit-text'>5</text>
+            </view>
+        </view>
+    </view>
+    <view class="group-wrapper">
+        <view>
+            <view class="group-item">
+                <view class="group-item-title">兑换条件</view>
+                <view class="right-item">
+                    <input class="text-right" type="text" bindinput="inputEnter" data-type="exchangeCondi" placeholder-class="phcolor" placeholder="送到现场"/>
+                </view>
+            </view>
+            <view class="group-item">
+                <view class="group-item-title">备注</view>
+                <view class="right-item">
+                    <input class="text-right" type="text" bindinput="inputEnter" data-type="exchangeInfo" placeholder-class="phcolor" placeholder="请输入现场信息（房号/位置/要求等）"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='credit-foot'>
+      <view class='ex-info-text'>请耐心等待工作人员配送</view>
+      <button class="exchange-btn" bindtap="submitExchange">确认兑换</button>
+    </view>
+</view>

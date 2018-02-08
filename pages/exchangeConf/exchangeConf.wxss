@@ -1,0 +1,80 @@
+/* pages/exchangeConf/exchangeConf.wxss */
+page{background: #f6f6f6;}
+.goods-base-info{
+    display:flex;
+    flex-direction:row;
+    position: relative;
+    background: #fff;
+}
+.goods-base-info .goods-img{
+    padding: 24rpx 26rpx 22rpx;
+}
+.goods-img image {
+    border-radius: 4px;
+    width: 166rpx;
+    height: 166rpx;
+}
+.other-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.other-info-wrapper .nickname-box{
+    font-size: 30rpx;color: #333;
+    margin-top: -30rpx;margin-bottom: 10rpx;
+}
+.credit-text{color: #999;font-size: 28rpx;}
+.nickname-box text{
+    display: inline-block;
+}
+.need-pay-credits{
+  display: inline-block;
+  margin-left: 6px;
+}
+.ft-15{
+  font-size: 15px;
+}
+
+.group-wrapper{
+    border-top: 1px solid #ddd;
+}
+.group-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 22rpx 12rpx;
+    padding-right: 0;
+    border-bottom: 1px solid #DDDDDD;
+}
+.group-item-title{
+    padding-left: 26rpx;
+    font-size: 16px;
+}
+.right-item{
+    position: absolute;
+    display: flex;
+    right: 14px;
+    font-size: 14px;
+    top:14px;
+}
+.right-item .text-right{text-align: right;}
+.right-item input{width: 260px;}
+.credit-foot{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 100rpx;
+}
+.exchange-btn{
+    width: 75%;
+    margin: 0 auto;
+    font-size: 30rpx;
+    background: #1a1a1a;color: #fff;
+    padding: 6px 14px;
+}
+.ex-info-text{
+  color: #325782;font-size: 26rpx;margin-bottom: 18rpx;text-align: center;
+}
