@@ -1,0 +1,4 @@
+/* component/noGoods/noGoods.wxss */
+.no-goods{
+    font-size: 30rpx;color: #333;padding-top: 20rpx;text-align: center;
+}

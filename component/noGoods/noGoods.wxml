@@ -1,0 +1,2 @@
+<!--component/noGoods/noGoods.wxml-->
+<view class="no-goods">{{noGoodsText}}</view>

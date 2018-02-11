@@ -5,6 +5,7 @@
     "pages/mine/mine",
     "pages/goodsList/goodsList",
     "pages/search/search",
+    "pages/groups/groups",
     "pages/goodsDetail/goodsDetail",
     "pages/charge/charge",
     "pages/myWallet/myWallet",

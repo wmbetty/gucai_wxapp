@@ -1,0 +1,9 @@
+<!--pages/groups/groups.wxml: 套装内选择页面-->
+<view>
+    <!--商品列表数据: goodsSimple组件-->
+    <group-list goods-list="{{goodsList}}"></group-list>
+</view>
+<view class="group-foot_bar">
+    <view class="bar-left_text" bindtap="groupCancle">放弃套餐</view>
+    <view class="confirm-btn">确认</view>
+</view>

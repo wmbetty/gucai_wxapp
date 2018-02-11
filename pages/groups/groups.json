@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "套装内选择",
+  "usingComponents": {
+    "group-list": "../../component/goods/groupGoods/groupGoods"
+  }
+}

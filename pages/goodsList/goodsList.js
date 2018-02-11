@@ -15,21 +15,16 @@ Page({
       ], // 商品列表左侧数据
     currTable: 'VIP区',
     goodsList: [
-      {id : 1,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 1, price: 100},
-      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../images/wine_test1.png', count: 1, price: 100.50},
-      {id : 3,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 1, price: 204}
-      // {id : 4,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 8, price: 100},
-      // {id : 5,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../images/wine_test1.png', count: 10, price: 100.50},
-      // {id : 6,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 3, price: 204},
-      // {id : 7,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 3, price: 204},
-      // {id : 8,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 8, price: 100},
-    ], // 右侧商品列表
-    cartCount: 4, // 购物车商品数量
+      {id : 1,name : '蓝色夏威夷', image: '../../../images/test1.png', count: 1, price: 100},
+      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../../images/wine_test1.png', count: 1, price: 100.50},
+      {id : 3,name : '蓝色夏威夷ccc', image: '../../../images/wine_test2.png', count: 1, price: 204}
+    ], // 商品列表
+    cartCount: 0, // 购物车商品数量
     getGoods: [],
     recordList: [
-      {id : 1,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 8, price: 100 ,spec: '支',
-        subGoods: '可乐*1，雪碧*1，一味药*3，香烟*2，香蕉*1,一味药*3，香烟*2，香蕉*1', isSend: true, outTime: '01:23'},
-      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../images/wine_test1.png', count: 10, price: 100.50 ,spec: '支', subGood: '', isSend: false, outTime: '03:25'},
+      {id : 1,name : '蓝色夏威夷', image: '../../../images/wine_test2.png', count: 8, price: 100 ,spec: '支',
+        subGoods: '可乐*1，雪碧*1，一味药*3，香烟*2，香蕉*1,一味药*3，香烟*2，香蕉*1', isSend: true, outTime: '01:23', out: true},
+      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../../images/wine_test1.png', count: 10, price: 100.50 ,spec: '支', subGood: '', isSend: false, outTime: '03:25', out: false},
     ],
     noGoodsText: ''
   },
@@ -104,38 +99,41 @@ Page({
 
   // 商品数减
   numCut (e) {
-    let that =this
-    let goods = that.data.getGoods
-    var item = e.currentTarget.dataset.type; // 当前商品操作
-    var count = item.count
-    for (let i = 0; i < goods.length; i++) {
-      if (item.id === goods[i].id && item.count > 1) {
-        count --
-        item.count = count
-        goods.splice(i, 1, item)
-      }
-    }
-    that.setData({
-      getGoods: goods
-    })
+    // let that =this
+    // let goods = that.data.getGoods
+    // var item = e.currentTarget.dataset.type; // 当前商品操作
+    // var count = item.count
+    // for (let i = 0; i < goods.length; i++) {
+    //   if (item.id === goods[i].id && item.count > 1) {
+    //     count --
+    //     item.count = count
+    //     goods.splice(i, 1, item)
+    //   }
+    // }
+    // that.setData({
+    //   getGoods: goods
+    // })
   },
 
   // 商品数加
   numAdd (e) {
-    let that =this
-    let goods = that.data.getGoods
-    var item = e.currentTarget.dataset.type // 当前商品操作
-    var count = item.count
-    for (let i = 0; i < goods.length; i++) {
-      if (item.id === goods[i].id && item.count >= 1) {
-        count ++
-        item.count = count
-        goods.splice(i, 1, item)
-      }
-    }
-    that.setData({
-      getGoods: goods
+    wx.navigateTo({
+      url: '/pages/groups/groups'
     })
+    // let that =this
+    // let goods = that.data.getGoods
+    // var item = e.currentTarget.dataset.type // 当前商品操作
+    // var count = item.count
+    // for (let i = 0; i < goods.length; i++) {
+    //   if (item.id === goods[i].id && item.count >= 1) {
+    //     count ++
+    //     item.count = count
+    //     goods.splice(i, 1, item)
+    //   }
+    // }
+    // that.setData({
+    //   getGoods: goods
+    // })
   },
 
   // 输入商品数目

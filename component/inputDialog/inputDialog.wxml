@@ -1,0 +1,17 @@
+<!--component/inputDialog/inputDialog.wxml-->
+<!--component/inputDialog/inputDialog.wxml-->
+<!--带输入框的弹窗-->
+<view class="gc-modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="gc-modal-dialog" wx:if="{{showModal}}">
+    <view class="gc-modal-title">确认密码</view>
+    <view class="gc-modal-content">
+        <view class="gc-modal-input">
+            <input placeholder-class="input-holder" type="password" maxlength="10" bindinput="inputChange" class="gc-dialog-input" placeholder="请输入密码"></input>
+        </view>
+    </view>
+    <view class="gc-modal-footer">
+        <view class="dialog-btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="dialog-btn-confirm" bindtap="onConfirm" data-status="confirm">确认</view>
+    </view>
+</view>
+
