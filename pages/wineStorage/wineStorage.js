@@ -1,5 +1,5 @@
 // pages/wineStorage/wineStorage.js
-import wxJs from "../../common/wxJs";
+import wxJs from "../../utils/wxJs";
 
 Page({
 

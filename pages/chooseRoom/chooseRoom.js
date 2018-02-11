@@ -1,5 +1,5 @@
 // pages/chooseRoom/chooseRoom.js
-import wxJs from '../../common/wxJs'
+import wxJs from '../../utils/wxJs'
 
 Page({
 

@@ -1,5 +1,5 @@
 // pages/goOrder/goOrder.js
-import wxJs from '../../common/wxJs'
+import wxJs from '../../utils/wxJs'
 
 Component({
   /**

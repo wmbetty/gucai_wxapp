@@ -1,5 +1,5 @@
 //login.js
-  import {showInfoModal} from '../../common/wxJs'
+  import {showInfoModal} from '../../utils/wxJs'
 
 //获取应用实例
 const app = getApp()

@@ -1,5 +1,5 @@
 // pages/orderRoom/orderRoom.js
-import wxJs from '../../common/wxJs'
+import wxJs from '../../utils/wxJs'
 
 Page({
 
