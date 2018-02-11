@@ -1,5 +1,6 @@
 // pages/mine/mine.js
 import wxJs from '../../utils/wxJs'
+// var Data = require('../../api/data.js');
 
 Page({
 
@@ -7,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // profile: 'user', //登录用户身份
-    profile: 'employee',
+    profile: 'user', //登录用户身份
+    // profile: 'employee',
     userInfo: {},
     phoneNo: '020-88888888'
   },
@@ -27,6 +28,15 @@ Page({
     })
   },
   
+  userInfoClick(e){
+    // console.log(e);
+    // if(Data.isLogin()){
+    //   wx.navigateTo({
+    //     url: '../login/login',
+    //   })
+    // }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
