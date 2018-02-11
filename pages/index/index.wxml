@@ -18,21 +18,25 @@
     <view class='infos-cont'>
         <view class="infos-cont-item">
             <image class="bar-split-line" src="/images/ic_line_right.png"></image>
-            <view>关于酒吧</view>
+            <view class="bar_title">关于酒吧</view>
             <image class="bar-split-line" src="/images/ic_line_left.png"></image>
         </view>
         <view class='bar-infos'>
-          五号酒吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+            五号酒吧于微醺夜色中，饱览斑斓一线江景，夜色降临，
+            广州的夜生活才刚开始。约上三五知己，穿过独具岭南
+            气息的酒店大堂，转左独上七楼。位于酒店顶楼的户外
+            阅江酒吧，一推开门口便是180度一线江景，开阔江湾瞬
+            间在眼前绽放。各式经典鸡尾酒静候佳人钦点。
         </view>
         <view class='location-text'>
             <view class="infos-cont-item">
                 <image class="bar-split-line" src="/images/ic_line_right.png"></image>
-                <view>所在位置</view>
+                <view class="bar_title">所在位置</view>
                 <image class="bar-split-line" src="/images/ic_line_left.png"></image>
             </view>
         </view>
-        <view class="bar-infos">
-            <image class="bar-location_img" src="/images/test1.png"></image>
+        <view>
+            <image class="bar-location_img" src="/images/wine_test2.png" mode='aspectFit'></image>
         </view>
     </view>
     <order-btn></order-btn>
