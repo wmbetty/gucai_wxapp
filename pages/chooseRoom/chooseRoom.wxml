@@ -14,19 +14,19 @@
               <view class="picker">
                 {{dateTitle}}: {{orderDate}}
               </view>
-                <text></text>
             </picker>
           </view>
           <view class='room-container'>
             <view wx:for="{{getRooms}}" class="{{item.roomBgColor}}" wx:key="item.id" data-type="{{item}}" bindtap='goOrder'>
               <view class='room-name'>{{item.name}}</view>
-              <view class="{{!item.hidden ? 'text-hidden' : ''}}">最大人数：{{item.maxPeople}}</view>
-              <view wx:if="{{item.status === 0}}">低消：{{item.leastConsumed}}</view>
-              <view wx:if="{{item.status === 1}}">已开台</view>
-              <view wx:if="{{item.status === 2}}">维修中</view>
-              <view wx:if="{{item.status === 3}}">已预订</view>
+              <view class="{{item.status === 0 ? 'font-24' : 'text-hidden font-24'}}">最大人数：{{item.maxPeople}}</view>
+              <view wx:if="{{item.status === 0}}" class="font-24">低消：{{item.leastConsumed}}</view>
+              <view wx:if="{{item.status === 1}}" class="font-24">已开台</view>
+              <view wx:if="{{item.status === 2}}" class="font-24">维修中</view>
+              <view wx:if="{{item.status === 3}}" class="font-24">已预订</view>
             </view>
-              <view wx:if="{{getRooms.length === 0}}" class="no-rooms">{{noRoomText}}</view>
+              <!--没有数据时-->
+              <no-room wx:if="{{getRooms.length === 0}}" no-goods-text="{{noRoomText}}"></no-room>
           </view>
         </view>
     </view>

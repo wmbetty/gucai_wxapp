@@ -39,20 +39,18 @@ page{
     width: 30px;
 }
 .operator-icon{
-    width: 26px;
-    height: 22px;
-    border-radius: 4px;
-    font-size: 36rpx;
-  text-align: center;
-  line-height: 22px;
-  background: #fff;
-  border: 1px solid #ccc;
+    width: 50rpx;
+    height: 45rpx;
 }
 .operator-icon:first-child{
-  margin-right: 3px;
+    margin-right: 0.2rem;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAYAAADsvzj/AAABeklEQVRoge3asU4VQRSH8d9uCNpAYik8ANFELIkJPoEF3W1wY2GrsbShpLGUksLCkeZ2FD4BNJRg1BgzlYEHgAKh0WKutiS7q3f2Zr5kqt2T/L89M1vs2SrGaMI8nuMZ7mNBnlzgBB/wLoRwDfXk4hKO8ACvsIwq07WM13iIo6ZplqCKMd7CIfax3csz+39sYQPrVYzxBVbwcrqZWrOD7zWeSvttqOxhs5b22vGUw3ThK+7VuI2fUw7TmhDCORbrG+8cCEUkN4pIbhSR3CgiuVFEcqOI5MZc28LRaNRnjr+Mx+NWdTPTka4iB/jV0zroEiSnjlRdilufkQmPO9b3Rk4d6UTrjrR9u/wrZqYjRSQ3ikhuFJHcKCK5UURyY2ZEqhjjJe4Y7rBnET9qfJLG0kNlBd9qBDRTDtOFBqHGLh5JM+uhsSVl353DlTR0/4i7eI8v0q8SObKAVWxKEk9CCFd/3lpnWMNnvMWp/r6O9L1O8UY622shhDP4DSw3fMHh748HAAAAAElFTkSuQmCC") no-repeat;
+    background-size: 100% 100%;
 }
 .operator-icon:last-child{
-  margin-left: 3px;
+    margin-left: 0.2rem;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAYAAADsvzj/AAABrUlEQVRoge3aoW/VUBTH8U+bBTBbgmT7AxaWAHIhGX8BAvfMaBBYFiRmEoMEOYHggnkOwV+wmUkgQAi5imx/AAgYBkTfE8z0pV3b25d+kyOa3tt7fj333tP2NIsxmnEJD/EAW1iVJj/xAa/xMoTwB/LZyXUc4wYeYwNZoraBJ7iF46Io1iGLMV7GEd7i6YXcs+7Yxz3sZDHGR9jEXr8+1eYFvuW4r5xvQ+UNdnPlXHvfszNN+ILrOa7gd8/O1CaE8ANreWXLgTAKSY1RSGqstHnxyWTy3/F0Om1trC4icjizVmk1IjN2OhhjedbIKCQ1RiGpUWvXOp8fLrpfnXyzNBFpKuQQfytsTlW7RkkzpYhkTTo3zex3Fmgzj0ojR6tIKSKNqBWRRXeVZXv67YRRSGqMQlKjizfEIy3nELoRskjSbEyrQtrMG+dZmjUyCkmNpRGSxRh/4arhFnvW8D3HR2VZeqhs4muOgKJnZ5pQIOQ4wG1lzXpo7Ct9P1jBmbLo/g7X8Aqflb9KpMgqbmJXKeJuCOFsvmudYhuf8Bwnqr969GUneKZc29shhFP4B5rYh5HTp0MwAAAAAElFTkSuQmCC") no-repeat;
+    background-size: 100% 100%;
 }
 .room-head{
     padding: 8px 10px 12px 10px;

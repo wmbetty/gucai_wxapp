@@ -27,7 +27,20 @@ Page({
       url: '/pages/storeWine/storeWine'
     })
   },
-  
+
+  changeProfile (e) {
+    let type = e.currentTarget.dataset.type
+    if (type === 'user') {
+      this.setData({
+        profile: 'employee'
+      })
+    } else {
+      this.setData({
+        profile: 'user'
+      })
+    }
+  },
+
   userInfoClick(e){
     // console.log(e);
     // if(Data.isLogin()){

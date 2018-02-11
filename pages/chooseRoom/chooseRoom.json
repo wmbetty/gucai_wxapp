@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "选择房间"
+  "navigationBarTitleText": "选择房间",
+  "usingComponents": {
+    "no-room": "../../component/noGoods/noGoods"
+  }
 }

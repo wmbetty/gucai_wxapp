@@ -20,9 +20,9 @@
                 <view class="group-item">
                     <view class="group-item-title">数量</view>
                     <view class="right-item">
-                        <text class="inline-item operator-icon" catchtap="numCut">-</text>
+                        <text class="inline-item operator-icon" catchtap="numCut"></text>
                         <input class="inline-item small-put" type="number" bindinput="inputEnter" value="{{count}}" data-type="people" placeholder-class="phcolor" placeholder="1"/>
-                        <text class="inline-item operator-icon" catchtap="numAdd">+</text>
+                        <text class="inline-item operator-icon" catchtap="numAdd"></text>
                     </view>
                 </view>
             </view>
