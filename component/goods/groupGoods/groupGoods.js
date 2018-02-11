@@ -24,6 +24,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 看商品详情
+        gotoDetail () {
+          wx.navigateTo({
+            url: '../../pages/goodsDetail/goodsDetail'
+          })
+        }
   }
 })
