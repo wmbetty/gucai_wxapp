@@ -1,46 +1,45 @@
 /* pages/myWines/myWines.wxss */
 page{background: #f6f6f6;padding-bottom: 80rpx;}
 .wine-list-item{
-    padding: 18rpx 40rpx;font-size: 30rpx;
-    margin-bottom: 8px;
+    padding: 33rpx 25rpx 25rpx 33rpx;font-size: 30rpx;
+    margin-bottom: 20rpx;
     background: #fff;
-    /* letter-spacing: 1px; */
 }
 .wine-list-infos{
     display: flex;
-}
-.wine-list-item_left{width: 77%;}
-.wine-list-item_right{
-    flex: auto;
+    justify-content: space-between;
 }
 .wine-list-item_right image{
     display: block;
-    width: 150rpx;
-    height: 150rpx;
+    width: 125rpx;
+    height: 125rpx;
     margin-right: 6rpx;margin-top: 20rpx;
 }
 .wine-list-item_left view{
-    margin-bottom: 12px;
+    margin-bottom: 14rpx;
 }
 .wine-btn{
-    font-size: 30rpx;
+    font-size: 28rpx;
     background: #FF3939;color: #fff;
-    padding: 12rpx 0;
+    padding: 15rpx 0;
     border-radius: 4px;
-    width: 146rpx;
+    width: 154rpx;
     text-align: center;
     margin-top: 32rpx;
 }
-.wine-goods-img{
+.wine-goods-img-list{
     display: inline-block;
-    width: 30.5%;
-    height: 104px;
+    width: 220rpx;
+    height: 220rpx;
     background: #fff;
-    margin-right: 12px;
+    margin-right: 13rpx;
 }
-.wine-goods-img:last-child{margin-right: 0;}
-.wine-goods-img-container{margin-top: 8px;}
-
-@media screen and (max-width: 320px){
-    .wine-goods-img{width: 29.5%;height: 90px;}
+.wine-goods-img-list image{
+    display: block;
+    width: auto;
+    height: 220rpx;
+    max-width: 100%;
+    margin: 0 auto 27rpx;
 }
+.wine-goods-img-list:last-child{margin-right: 0;}
+.wine-goods-img-container{margin-top: 32rpx;}
