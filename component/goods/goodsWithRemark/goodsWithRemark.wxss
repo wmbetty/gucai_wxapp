@@ -1,0 +1,19 @@
+/* component/goods/goodsWithRemark/goodsWithRemark.wxss */
+@import "../goodsSimple/goodsSimple.wxss";
+page{background: #F6F6F6;}
+.goods-list{padding: 0 0 0 30rpx;}
+.remark-container{padding: 32rpx 30rpx 34rpx 34rpx;font-size: 30rpx;color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+.goods-list-item{
+    padding: 32rpx 0;
+    border-bottom: 1px solid #ddd;
+}
+.phcolor{color: #949494;}
+.remark-input{text-align: right;}
+.goods-list{margin-bottom: 20rpx;}
+.cart-remark-goods{
+    margin-top: 12rpx;
+    font-size: 22rpx;color: #888;
+}

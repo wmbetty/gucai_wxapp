@@ -1,0 +1,35 @@
+/* component/goods/goodsWithGivebtn/goodsWithGivebtn.wxss */
+@import "../goodsSimple/goodsSimple.wxss";
+
+.goods-list-item{padding: 30rpx 24rpx 30rpx 30rpx;}
+.record-list-item{background: #fff;margin-bottom: 20rpx;border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;padding-bottom: 14rpx;}
+.record-list-item:first-child{border-top: none;}
+.record-list-item:last-child{border-bottom: none;}
+.r-split-line{width: 100%;height: 10rpx;background: #F6F6F6;}
+.color-888{color: #888;font-size: 24rpx;}
+.send-text{
+    background: rgba(246,250,255,1);
+    margin-left: 20rpx;
+    font-size: 22rpx;color: rgba(50,87,130,1);border: 1px solid #325782;border-radius: 4rpx;
+    padding: 0 4rpx;
+    width: 100rpx;height: 30rpx;
+}
+.record-list-item-info{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20rpx;
+}
+.record-goods-list{
+    font-size: 22rpx;
+    width: 100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin: 21rpx 0 23rpx;
+}
+.red-font{color: #FF3939;font-size: 26rpx;}

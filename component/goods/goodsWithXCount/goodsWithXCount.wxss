@@ -1,0 +1,14 @@
+/* component/goods/goodsWithXCount/goodsWithXCount.wxss */
+@import "../goodsSimple/goodsSimple.wxss";
+.goods-list-item_text{margin-bottom: 12rpx;}
+.goods-list-item{padding: 30rpx 30rpx 30rpx 0;border-bottom: 1px solid #ddd;}
+.goods-remark{font-size: 22rpx;color: #888;margin-top: 10rpx;}
+.remark-goods{font-size: 22rpx;color: #888;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.red-font, .goods-list-item-right{font-size: 30rpx;}

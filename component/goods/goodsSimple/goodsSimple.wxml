@@ -1,0 +1,22 @@
+<!--component/goodsSimple/goodsSimple.wxml-->
+<view class="goods-list" wx:for="{{goodsList}}" wx:key="idx">
+    <view class="goods-list_header" wx:if="{{item.groupNo >= 1}}">
+        <text decode="{{true}}">套装里面的组&nbsp;{{item.groupNo}}&nbsp;</text>
+    </view>
+    <view class="goods-list-item" catchtap="gotoDetail">
+        <view class="goods-list-item-media"><image src="{{item.image}}"></image></view>
+        <view class="goods-list-item-inner">
+            <view class="goods-list-item_text">{{item.name}}</view>
+            <view class="goods-list-item-info">
+                <view class="goods-list-item-text red-font">￥{{item.price}}</view>
+                <view class="goods-list-item-right">
+                    <view class="operator-icon" catchtap="numCut" data-type="{{item.count}}"></view>
+                    <view>
+                        <input type="text" class="goods-num" bindinput="inputEnter" value="{{item.count}}"/>
+                    </view>
+                    <view class="operator-icon" catchtap="numAdd" data-type="{{item.count}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

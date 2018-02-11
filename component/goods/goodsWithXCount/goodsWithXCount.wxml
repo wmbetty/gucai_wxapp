@@ -1,0 +1,13 @@
+<!--component/goods/goodsWithXCount/goodsWithXCount.wxml-->
+<view class="goods-list-item" wx:for="{{getGoods}}" wx:key="{{item.id}}">
+    <view class="goods-list-item-media"><image src="{{item.image}}"></image></view>
+    <view class="goods-list-item-inner">
+        <view class="goods-list-item_text">{{item.name}}</view>
+        <view class="remark-goods">可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐</view>
+        <view class="goods-remark" wx:if="{{item.remark}}">备注：{{item.remark}}</view>
+        <view class="goods-list-item-info">
+            <view class="goods-list-item-text red-font">￥{{item.price}}</view>
+            <view class="goods-list-item-right goods-count-text">x{{item.count}}</view>
+        </view>
+    </view>
+</view>

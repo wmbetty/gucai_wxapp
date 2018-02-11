@@ -1,0 +1,9 @@
+/* component/goods/groupGoods/groupGoods.wxss */
+@import "../goodsSimple/goodsSimple.wxss";
+.goods-list{margin-bottom: 0;}
+.goods-list-item{
+    padding: 33rpx 0 33rpx;
+    border-bottom: 1px solid #ddd;
+    margin-left: 30rpx;
+}
+.goods-list-item:last-child{border: none;}

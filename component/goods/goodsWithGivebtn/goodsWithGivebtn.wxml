@@ -1,0 +1,16 @@
+<!--component/goods/goodsWithGivebtn/goodsWithGivebtn.wxml-->
+<view class="goods-list-item record-list-item" wx:for="{{recordList}}" wx:key="{{item.id}}">
+    <view class="goods-list-item-media"><image src="{{item.image}}"></image></view>
+    <view class="goods-list-item-inner">
+        <view class="goods-list-item_text">
+            <text>{{item.name}}</text>
+            <text class="send-text" wx:if="{{item.isSend}}">赠送商品</text>
+        </view>
+        <text class="record-goods-list color-888">{{item.subGoods}}</text>
+        <view class="goods-list-item-info">
+            <view class="red-font">单价：{{item.price}}/{{item.spec}}</view>
+            <view class="color-888">数量：{{item.count}}</view>
+            <text class="color-888" decode="{{true}}">{{item.outTime}}&nbsp;{{item.out ? '已出' : '未出'}}</text>
+        </view>
+    </view>
+</view>

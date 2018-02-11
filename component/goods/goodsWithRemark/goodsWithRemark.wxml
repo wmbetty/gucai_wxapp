@@ -1,0 +1,26 @@
+<!--component/goods/goodsWithRemark/goodsWithRemark.wxml-->
+<view>
+    <view class="goods-list" wx:for="{{goodsList}}" wx:key="idx">
+        <view class="goods-list-item" catchtap="gotoDetail">
+            <view class="goods-list-item-media"><image src="{{item.image}}"></image></view>
+            <view class="goods-list-item-inner">
+                <view class="goods-list-item_text">{{item.name}}</view>
+                <view class="cart-remark-goods">可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐可乐</view>
+                <view class="goods-list-item-info">
+                    <view class="goods-list-item-text red-font">￥{{item.price}}</view>
+                    <view class="goods-list-item-right">
+                        <view class="operator-icon" catchtap="numCut"></view>
+                        <view>
+                            <input type="text" class="goods-num" bindinput="inputEnter" value="1"/>
+                        </view>
+                        <view class="operator-icon" catchtap="numAdd"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="remark-container">
+            <text>备注</text>
+            <input class="remark-input" type="text" placeholder="请输入备注" placeholder-class="phcolor"/>
+        </view>
+    </view>
+</view>
