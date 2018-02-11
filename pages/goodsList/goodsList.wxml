@@ -49,10 +49,10 @@
     <view class="goods-foot" wx:if="{{goodsListTabActive}}">
         <view>
             <view class="cart-cont">
-                <image class="cart_icon" src="/images/cart_icon.png"></image>
+                <image class="cart_icon" src="/images/cart_icon.png" catchtap="gotoCart"></image>
                 <text class="cart_count" wx:if="{{cartCount >= 1}}">{{cartCount}}</text>
             </view>
         </view>
-        <view class="order-confirm-btn">确认下单</view>
+        <view class="order-confirm-btn" bindtap="goOrderConfirm">确认下单</view>
     </view>
 </view>

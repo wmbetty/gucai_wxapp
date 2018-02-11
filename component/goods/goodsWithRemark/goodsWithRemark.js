@@ -10,6 +10,10 @@ Component({
       observer () {
 
       }
+    },
+    showRemarkInput: {
+      type: Boolean,
+      value: true
     }
   },
 
@@ -24,6 +28,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    gotoDetail () {
+      wx.navigateTo({
+        url: '../../pages/goodsDetail/goodsDetail'
+      })
+    }
   }
 })

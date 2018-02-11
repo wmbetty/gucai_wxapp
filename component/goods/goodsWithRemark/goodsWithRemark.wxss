@@ -1,6 +1,6 @@
 /* component/goods/goodsWithRemark/goodsWithRemark.wxss */
 @import "../goodsSimple/goodsSimple.wxss";
-page{background: #F6F6F6;}
+/*page{background: #F6F6F6;}*/
 .goods-list{padding: 0 0 0 30rpx;}
 .remark-container{padding: 32rpx 30rpx 34rpx 34rpx;font-size: 30rpx;color: #333;
     display: flex;

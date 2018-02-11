@@ -83,7 +83,7 @@
 .cart_count{
     position: absolute;top:0;right: -3rpx;
     background: #FF3939;color: #fff;
-    width: 30rpx;height: 30rpx;border-radius: 50%;
+    width: 36rpx;height: 36rpx;border-radius: 50%;
     text-align: center;line-height: 30rpx;font-size: 26rpx;
 }
 .no-goods{

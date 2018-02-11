@@ -167,6 +167,20 @@ Page({
     })
   },
 
+  // 到购物车页
+  gotoCart () {
+    wx.navigateTo({
+      url: '/pages/cart/cart'
+    })
+  },
+
+  // 到确认下单页
+  goOrderConfirm () {
+    wx.navigateTo({
+      url: '/pages/orderConfirm/orderConfirm'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

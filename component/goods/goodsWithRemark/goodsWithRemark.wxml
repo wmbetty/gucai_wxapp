@@ -18,7 +18,7 @@
                 </view>
             </view>
         </view>
-        <view class="remark-container">
+        <view class="remark-container" wx:if="{{showRemarkInput}}">
             <text>备注</text>
             <input class="remark-input" type="text" placeholder="请输入备注" placeholder-class="phcolor"/>
         </view>

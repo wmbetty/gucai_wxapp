@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "搜索商品"
+  "navigationBarTitleText": "搜索商品",
+  "usingComponents": {
+    "no-good": "../../component/noGoods/noGoods",
+    "search-goods": "../../component/goods/goodsWithRemark/goodsWithRemark"
+  }
 }
