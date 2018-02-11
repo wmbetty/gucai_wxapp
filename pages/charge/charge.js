@@ -15,7 +15,8 @@ Page({
         title: '充200送60', rewards: '可获得60积分', chargeMoney: '200.00'
       }
     ],
-    needPay: '100.00'
+    needPay: '100.00',
+    color: '#FF3939'
   },
 
   /**

@@ -12,7 +12,7 @@
                         </view>
                         <view class="charge-money-cont">
                             <text class="c-money">{{item.chargeMoney}}</text>
-                            <radio value="{{item.chargeMoney}}" checked="{{item.checked}}"/>
+                            <radio color="{{color}}" value="{{item.chargeMoney}}" checked="{{item.checked}}"/>
                         </view>
                     </view>
                 </radio-group>
