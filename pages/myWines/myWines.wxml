@@ -14,10 +14,9 @@
             </view>
         </view>
         <view class='wine-goods-img-container'>
-            <view class="wine-goods-img-list"><image class="wine-goods-img" src="../../images/wine_test2.png"></image></view>
-            <view class="wine-goods-img-list"><image class="wine-goods-img" src="/images/wine_test1.png"></image></view>
-            <view class="wine-goods-img-list"><image class="wine-goods-img" src="/images/test1.png"></image></view>
-
+            <image class="wine-goods-img" src="/images/wine_test1.png"></image>
+            <image class="wine-goods-img" src="/images/wine_test1.png"></image>
+            <image class="wine-goods-img" src="/images/wine_test1.png"></image>
         </view>
     </view>
 </view>
