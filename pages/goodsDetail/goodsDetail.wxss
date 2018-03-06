@@ -5,17 +5,17 @@
     width: 100%;height: 100%;
 }
 swiper{
-    height: 500rpx;
+    height: 256px;
 }
 .goods-infos-container{
-    padding: 34rpx 28rpx;
+    padding: 28rpx 24rpx;
 }
 .goods-name{
     color: #000;
-    font-size: 32rpx;
+    font-size: 34rpx;
 }
 .red-font{color: #FF3939;}
-.goods-price{padding: 34rpx 0 35rpx;font-size: 42rpx;}
+.goods-price{padding: 30rpx 0;font-size: 42rpx;}
 .goods-details{
     font-size: 28rpx;color: #666;
 }

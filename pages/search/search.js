@@ -7,16 +7,19 @@ Page({
   data: {
     searchText: '', // 搜索框文字
     goodsList: [
-      {id : 1,name : '蓝色夏威夷', image: '../../../images/wine_test2.png', count: 1, price: 100},
-      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../../images/wine_test1.png', count: 1, price: 100.50},
-      {id : 3,name : '蓝色夏威夷ccc', image: '../../../images/test1.png', count: 1, price: 204}
+      {id : 1,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 1, price: 100},
+      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../images/wine_test1.png', count: 1, price: 100.50},
+      {id : 3,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 1, price: 204}
+      // {id : 4,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 8, price: 100},
+      // {id : 5,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷', image: '../../images/wine_test1.png', count: 10, price: 100.50},
+      // {id : 6,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 3, price: 204},
+      // {id : 7,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 3, price: 204},
+      // {id : 8,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 8, price: 100},
     ],
     getGoods: [], // 搜索结果
     cartCount: 0, // 购物车商品数量
     showCloseIcon: false, // 显示输入框清除按钮
-    focus: true, // input聚焦
-    showNoGoods: false, // 显示没有搜索结果
-    noGoodsText: '暂无搜索结果'
+    showNoGoos: false // 显示没有搜索结果
   },
 
   /**
@@ -59,9 +62,7 @@ Page({
   // 清除输入框文字
   clearInput () {
     this.setData({
-      searchText: '',
-      showCloseIcon: false,
-      focus: true
+      searchText: ''
     })
   },
 
@@ -136,48 +137,48 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

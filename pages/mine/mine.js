@@ -1,6 +1,5 @@
 // pages/mine/mine.js
 import wxJs from '../../utils/wxJs'
-// var Data = require('../../api/data.js');
 
 Page({
 
@@ -15,60 +14,32 @@ Page({
   },
 
   goStoreWine () {
-    let chooseBrandInfo = wxJs.getStorage('chooseBrandInfo', () => {})
-    let chooseWineStore = wxJs.getStorage('chooseWineStore', () => {})
-    if (chooseBrandInfo) {
-      wxJs.removeStorage('chooseBrandInfo', () => {})
-    }
-    if (chooseWineStore) {
-      wxJs.removeStorage('chooseWineStore', () => {})
-    }
+    wxJs.removeStorage('chooseBrandInfo', function () {})
+    wxJs.removeStorage('chooseWineStore', function () {})
     wx.navigateTo({
       url: '/pages/storeWine/storeWine'
     })
-  },
-
-  changeProfile (e) {
-    let type = e.currentTarget.dataset.type
-    if (type === 'user') {
-      this.setData({
-        profile: 'employee'
-      })
-    } else {
-      this.setData({
-        profile: 'user'
-      })
-    }
-  },
-
-  userInfoClick(e){
-    // console.log(e);
-    // if(Data.isLogin()){
-    //   wx.navigateTo({
-    //     url: '../login/login',
-    //   })
-    // }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
-  
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   // 退出登录
@@ -124,34 +95,34 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
