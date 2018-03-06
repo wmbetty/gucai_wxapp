@@ -7,8 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // userProfile: 'user', // 用户角色:用户
-    userProfile: 'employee', // 用户角色:工作人员
     currTable: 'VIP区', // 当前位置
     needPay: '',
     getGoods: [
@@ -23,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   // 到商品详情页
@@ -38,14 +36,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   radioChange (e) {
@@ -60,32 +58,28 @@ Page({
   orderConfirm () {
     let that = this
     let needPay = that.data.needPay
-    wxJs.showInfoModal('提示', needPay, false, function (res) {
-      if (res.confirm) {
-        wxJs.showToast('下单成功') // 提示信息
-      }
-    })
+    wxJs.showInfoModal('提示', needPay, false, function (res) {})
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
@@ -99,6 +93,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

@@ -1,5 +1,5 @@
 /* pages/orderConfirm/orderConfirm.wxss */
- page{background: #f6f6f6;} 
+page{background: #f6f6f6;}
 .order-main{padding-bottom: 80px;}
 .order-head{
     display: flex;
@@ -44,7 +44,7 @@
 }
 .wallet-icon{height: 46rpx;}
 .paychannel-text{
-    padding: 2px 32rpx 0;
+    padding: 0 8px;
 }
 .color-888{color: #888;}
 .paychannel-name{font-size: 30rpx;color: #000;}
@@ -72,7 +72,7 @@
     padding-bottom: 14rpx;
 }
 /*.order-list-item:last-child{*/
-    /*border-bottom: none;*/
+/*border-bottom: none;*/
 /*}*/
 .goods-count-text{font-size: 30rpx;}
 .goods-remark{font-size: 24rpx;color: #888;}
