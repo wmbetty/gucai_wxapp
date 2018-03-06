@@ -1,5 +1,6 @@
 // pages/mine/mine.js
-import wxJs from '../../utils/wxJs'
+import wxJs from '../../common/wxJs'
+var Data = require('../../api/data.js');
 
 Page({
 
@@ -7,18 +8,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    profile: 'user', //登录用户身份
-    // profile: 'employee',
+    // profile: 'user', //登录用户身份
+    profile: 'employee',
     userInfo: {},
     phoneNo: '020-88888888'
   },
 
   goStoreWine () {
-    wxJs.removeStorage('chooseBrandInfo', function () {})
-    wxJs.removeStorage('chooseWineStore', function () {})
+    let chooseBrandInfo = wxJs.getStorage('chooseBrandInfo', () => {})
+    let chooseWineStore = wxJs.getStorage('chooseWineStore', () => {})
+    if (chooseBrandInfo) {
+      wxJs.removeStorage('chooseBrandInfo', () => {})
+    }
+    if (chooseWineStore) {
+      wxJs.removeStorage('chooseWineStore', () => {})
+    }
     wx.navigateTo({
       url: '/pages/storeWine/storeWine'
     })
+  },
+
+  userInfoClick(e){
+    console.log(e);
+    if(Data.isLogin()){
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    }
   },
 
   /**

@@ -4,7 +4,7 @@
         <view><image src="/images/mine_default_avatar.png" class="avatar-image"></image></view>
         <view class="user-info_text">Betty</view>
         <view class="user-info_phone">13812345678</view>
-        <view class="user-tag" data-type="{{profile}}" bindtap="changeProfile">{{profile === 'user' ?  '用户' : '工作人员'}}</view>
+        <view class="user-tag">{{profile === 'user' ?  '用户' : '工作人员'}}</view>
     </view>
     <view class="group-wrapper">
         <view wx:if="{{profile === 'user'}}">
