@@ -1,5 +1,5 @@
 // pages/orderConfirm/orderConfirm.js
-import wxJs from '../../utils/wxJs'
+import wxJs from '../../common/wxJs'
 
 Page({
 
@@ -7,6 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // userProfile: 'user', // 用户角色:用户
+    userProfile: 'employee', // 用户角色:工作人员
     currTable: 'VIP区', // 当前位置
     needPay: '',
     getGoods: [
@@ -58,7 +60,11 @@ Page({
   orderConfirm () {
     let that = this
     let needPay = that.data.needPay
-    wxJs.showInfoModal('提示', needPay, false, function (res) {})
+    wxJs.showInfoModal('提示', needPay, false, function (res) {
+      if (res.confirm) {
+        wxJs.showToast('下单成功') // 提示信息
+      }
+    })
   },
 
   /**

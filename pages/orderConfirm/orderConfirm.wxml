@@ -23,7 +23,7 @@
             <view>商品总额</view>
             <view class="red-font">￥100.00</view>
         </view>
-        <view class="order-pay-wrapper">
+        <view class="order-pay-wrapper" wx:if="{{userProfile === 'user'}}">
             <view class="pay-title">支付方式</view>
             <view class="paychannel-list">
                 <radio-group class="" bindchange="" class="radio-group" bindchange="radioChange">
@@ -43,7 +43,7 @@
                     <view class="paychannel-list-item">
                         <view class="paychannel-list-left">
                             <image src="/images/wechatpay_icon.png" class="paychannel-icon"></image>
-                            <view class="paychannel-text pay-nobalance">
+                            <view class="paychannel-text">
                                 <view class="paychannel-name">微信支付</view>
                             </view>
                         </view>
@@ -54,8 +54,37 @@
                     <view class="paychannel-list-item">
                         <view class="paychannel-list-left">
                             <image src="/images/wallet_icon.png" class="paychannel-icon wallet-icon"></image>
-                            <view class="paychannel-text pay-nobalance">
+                            <view class="paychannel-text">
                                 <view class="paychannel-name">线下支付</view>
+                            </view>
+                        </view>
+                        <view>
+                            <radio color="{{radioColor}}" value="offline"/>
+                        </view>
+                    </view>
+                </radio-group>
+            </view>
+        </view>
+        <view class="order-pay-wrapper" wx:else>
+            <view class="pay-title">下单方式</view>
+            <view class="paychannel-list">
+                <radio-group class="" bindchange="" class="radio-group" bindchange="radioChange">
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/balance_icon.png" class="paychannel-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">帮客户下单</view>
+                            </view>
+                        </view>
+                        <view>
+                            <radio color="{{radioColor}}" value="2.0" checked="true"/>
+                        </view>
+                    </view>
+                    <view class="paychannel-list-item">
+                        <view class="paychannel-list-left">
+                            <image src="/images/ic_give.png" class="paychannel-icon"></image>
+                            <view class="paychannel-text">
+                                <view class="paychannel-name">赠送</view>
                             </view>
                         </view>
                         <view>

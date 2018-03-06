@@ -44,7 +44,7 @@ page{background: #f6f6f6;}
 }
 .wallet-icon{height: 46rpx;}
 .paychannel-text{
-    padding: 0 8px;
+    padding: 2px 32rpx 0;
 }
 .color-888{color: #888;}
 .paychannel-name{font-size: 30rpx;color: #000;}
