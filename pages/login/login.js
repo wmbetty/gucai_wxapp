@@ -8,15 +8,16 @@ const app = getApp()
 
 Page({
   data: {
-    phone: null,
-    account: null,
-    code: null,
+    phone: '', // 用户手机号
+    account: '', // 员工账号
+    code: '', // 验证码
     flag: false,
     sendCodeText: "发送验证码",
     isEmployee: false, //是否是员工,
-    password: null,
+    password: '', // 员工密码
     codeTime: 60, //验证码倒计时
-    codeDis: false //按钮点击状态，是否禁用
+    codeDis: false, //按钮点击状态，是否禁用
+    loginBtnActive: false // 是否激活按钮
   },
   //事件处理函数
   bindViewTap: function () {
@@ -27,6 +28,7 @@ Page({
   onLoad: function () {
   },
   inputEnter(e) {
+    let data = this.data
     var type = e.currentTarget.dataset.type;
     var value = e.detail.value;
     switch (type) {
@@ -50,6 +52,26 @@ Page({
           password: value
         })
         break;
+    }
+    if (type === 'password' && data.account !== '' && data.password !== '') { // 输入密码时
+      this.setData({
+        loginBtnActive: true // 激活登录按钮
+      })
+    }
+    if (type === 'password' && data.account !== '' && data.password === '') {
+      this.setData({
+        loginBtnActive: false // 取消激活登录按钮
+      })
+    }
+    if (type === 'code' && data.phone !== '' && data.code !== '') { // 输入验证码时
+      this.setData({
+        loginBtnActive: true // 激活登录按钮
+      })
+    }
+    if (type === 'code' && data.phone !== '' && data.code === '') {
+      this.setData({
+        loginBtnActive: false // 取消激活登录按钮
+      })
     }
   },
 
@@ -98,10 +120,13 @@ Page({
     if (!data.isEmployee) {
       if ((!/^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test(data.phone)) || (!(/^1(3|4|5|7|8)\d{9}$/.test(data.phone)))) {
         showInfoModal('提示', '请填写正确的手机号码', false, function (res) { })
+        return false
       }
       if (!data.code) {
         showInfoModal('提示', '请填写验证码', false, function (res) { })
+        return false
       }
+
     } else {
       if (data.account == null || data.account.length == 0) {
         showInfoModal('提示', '请填写员工账号', false)
@@ -114,7 +139,14 @@ Page({
       Api.verifyWoker(data.account, data.password, {
         success: function (e) {
           console.log(e);
-
+          var user={
+            user:e.data,
+            type:'employee',
+          } ;
+          Data.saveUser(user);
+          wx.navigateBack({
+            delta: 1,
+          })
         },
       })
     }

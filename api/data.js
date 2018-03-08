@@ -2,12 +2,21 @@ var user = undefined;
 var token = undefined;
 
 function isLogin() {
-  if (getToken() == undefined) {
+  if (getUser() ) {
     return false;
   } else {
     return true;
   }
 }
+
+function isWorker() {
+  if (getUser().type =='employee') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 function saveUser(userInfo) {
   user = userInfo;
@@ -18,37 +27,38 @@ function saveUser(userInfo) {
 }
 
 function getUser() {
-  if (user == undefined) {
+  if (user ) {
     user = wx.getStorageSync('user');
   }
   return user;
 }
 
-function saveToken(info) {
-  token = info;
-  wx.setStorage({
-    key: 'token',
-    data: token,
-  })
-}
+// function saveToken(info) {
+//   token = info;
+//   wx.setStorage({
+//     key: 'token',
+//     data: token,
+//   })
+// }
 
-function getToken() {
-  if (token == undefined) {
-    token = wx.getStorageSync("token");
-  }
-  return token;
-}
+// function getToken() {
+//   if (token == undefined) {
+//     token = wx.getStorageSync("token");
+//   }
+//   return token;
+// }
 
 function logout() {
-  saveToken(null);
-  saveUser(null);
+  // saveToken(null);
+  saveUser(undefined);
 }
 
 module.exports = {
   getUser: getUser,
   saveUser: saveUser,
   isLogin: isLogin,
-  getToken: getToken,
-  saveToken: saveToken,
+  // getToken: getToken,
+  // saveToken: saveToken,
   logout: logout,
+  isWorker: isWorker,
 }
