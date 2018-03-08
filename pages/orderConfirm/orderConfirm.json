@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "确认订单"
+  "navigationBarTitleText": "确认订单",
+  "usingComponents": {
+    "input-dialog": "../../component/inputDialog/inputDialog",
+    "order-goods-list": "../../component/goods/goodsWithXCount/goodsWithXCount"
+  }
 }

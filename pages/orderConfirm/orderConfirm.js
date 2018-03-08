@@ -7,16 +7,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // userProfile: 'user', // 用户角色:用户
-    userProfile: 'employee', // 用户角色:工作人员
+    userProfile: 'user', // 用户角色:用户
+    // userProfile: 'employee', // 用户角色:工作人员
     currTable: 'VIP区', // 当前位置
     needPay: '',
     getGoods: [
-      {id : 1,name : '蓝色夏威夷', image: '../../images/wine_test1.png', count: 1, price: 100},
-      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷夏威夷蓝色夏威夷', image: '../../images/wine_test1.png', count: 1, price: 100.50},
-      {id : 3,name : '蓝色夏威夷ccc', image: '../../images/wine_test1.png', count: 1, price: 204}
+      {id : 1,name : '蓝色夏威夷', image: '../../../images/wine_test1.png', count: 1, price: 100, remark: '加多冰'},
+      {id : 2,name : '蓝色夏威夷蓝色夏威夷蓝色夏威夷夏威夷蓝色夏威夷', image: '../../../images/wine_test2.png', count: 1, price: 100.50},
+      {id : 3,name : '蓝色夏威夷ccc', image: '../../../images/wine_test2.png', count: 1, price: 204}
     ], // 确认商品
-    radioColor: '#FF3939' // 单选按钮颜色
+    radioColor: '#FF3939', // 单选按钮颜色
+    showModal: false
   },
 
   /**
@@ -60,10 +61,13 @@ Page({
   orderConfirm () {
     let that = this
     let needPay = that.data.needPay
-    wxJs.showInfoModal('提示', needPay, false, function (res) {
-      if (res.confirm) {
-        wxJs.showToast('下单成功') // 提示信息
-      }
+    // wxJs.showInfoModal('提示', needPay, false, function (res) {
+    //   if (res.confirm) {
+    //     wxJs.showToast('下单成功') // 提示信息
+    //   }
+    // })
+    this.setData({
+      showModal: true
     })
   },
 
