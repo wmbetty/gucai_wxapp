@@ -3,7 +3,7 @@ var Log = require('../utils/log.js');
 var Data = require('data.js');
 var Md5 = require('../utils/md5.min.js');
 var CryptoJS = require('../utils/crypto-js/crypto-js.js')
-
+var Parser = require('../libs/dom-parser.js')
 
 function Post(data) {
   var url = data.url;
@@ -41,6 +41,7 @@ function Post(data) {
   })
 
 }
+
 
 function paramPreEncode(param) {
   if (param.paramType != undefined) {
@@ -112,9 +113,9 @@ function onFail(res, callBack) {
 
 function onSuccess(res, callBack) {
   wx.hideLoading();
-  var parser = new DOMParser();
-  var xmlDoc = parser.parseFromString(res.data, "text/xml");
-  var xmlConent = xmlDoc.getElementsByTagName("string")[0].innerHTML;
+  var parser = new Parser.DOMParser();
+  var xmlDoc = parser.parseFromString(res.data);
+  var xmlConent = xmlDoc.getElementsByTagName("string")[0].firstChild.nodeValue;
   if (xmlConent != undefined) {
     res.data = JSON.parse(xmlConent);
   }
@@ -168,14 +169,14 @@ function encode(message) {
     mode: CryptoJS.mode.ECB,
     padding: CryptoJS.pad.Pkcs7
   });
-  console.log("加密：" + encrypted.toString(), encrypted.ciphertext.toString(CryptoJS.enc.Base64));
+  console.log(message+"\n加密：" + encrypted.toString(), encrypted.ciphertext.toString(CryptoJS.enc.Base64));
   return encrypted.ciphertext.toString(CryptoJS.enc.Base64);
 }
 
 function serialize(obj) {
   var str = [];
   for (var p in obj)
-    if (obj.hasOwnProperty(p)) {
+    if (obj.hasOwnProperty(p) && obj[p]!=undefined) {
       str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
     }
   return "|" + str.join("|") + "|";
